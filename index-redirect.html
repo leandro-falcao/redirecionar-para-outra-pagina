@@ -9,6 +9,19 @@
         <h1>Redirecionando pagina em 2 segundos</h1>
 
         <script>
+            // usar o script na pagina diretamente e com sintaxe com funções arrow e etc.
+            
+            //arrow function sem ta setada a uma variavel mas poderia tbm esta numa variavel, 
+            //mas usada pra tira do escopo global por isso o setTimeout tbm dentro da função 
+            (() => {
+                const redirectPara = () => location.replace("https://www.google.com")
+               
+                // mas poderia usar href tbm
+                const redirectPara2 = () => location.href = "https://www.google.com"
+    
+                setTimeout(() => redirectPara(), 2000)
+            }) ()
+    
         
         </script>
 
